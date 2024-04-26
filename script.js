@@ -24,3 +24,26 @@ console.log(energy);
 let price = 4200;
 let sell = price / 100 * 90;
 console.log(sell);
+
+
+//5
+const v = 3.14;
+console.log(Math.floor(v));
+
+//6
+const t = '3.14pii12';
+console.log(parseFloat(t));
+
+//7
+const d = '3.1111ppppp';
+console.log(parseInt(d));
+
+//8
+const b = 16;
+console.log(Math.sqrt(b));
+
+//9
+const j = 10;
+const g = '12ppp';
+console.log(parseInt(g));
+console.log(j.toString());
