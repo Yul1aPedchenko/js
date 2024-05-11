@@ -56,7 +56,7 @@ function checkForm() {
     fieldValuePassword.length > 6
   ) {
       window.location.href = "../another.html";
-    //   alert('Я не знаю, чого вас не перекинуло на іншу сторінку, але та фігня не працюєю. Можливо це через те, що html файл не має хостингу :))')
+      alert('Тикніть окей, має працювати');
   } else {
     alert("False");
   }
