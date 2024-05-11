@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <script src="hw-3.js" type="module"></script>
-</body>
+  </head>
+  <body>
+    <!-- 1 -->
+
+    <input id="text-one" type="text" placeholder="значення 1" />
+    <input id="text-two" type="text" placeholder="значення 2" />
+    <button onclick="checkFields()">submit</button>
+
+    <!-- 2 -->
+
+    <input id="number-one" type="number" placeholder="number 1" />
+    <input id="number-two" type="number" placeholder="number 2" />
+    <button onclick="checkFieldsTwo()">submit</button>
+
+    <!-- 3 -->
+
+    <input id="text-check" type="text" placeholder="js" />
+    <button onclick="checkFieldsJs()">check</button>
+
+    <!-- 4 -->
+
+    <form action="">
+      <input id="number-four" type="number" placeholder="number" />
+      <button onclick="checkNumber()">check number</button>
+    </form>
+
+    <!-- 5 -->
+
+    <form action="">
+        <input id="full-name" type="text" placeholder="name">
+        <input id="email" type="email" placeholder="email">
+        <input id="password" type="password" placeholder="password">
+        <button onclick="checkForm()">check form</button>
+    </form>
+
+    <script src="hw-4.js"></script>
+  </body>
 </html>
