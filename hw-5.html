@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <h2>1</h2>
+    <form>
+      <select id="drinks" onchange="checkOptions()">
+        <option value="tea">tea</option>
+        <option value="coffee">coffee</option>
+        <option value="juice">juice</option>
+      </select>
+    </form>
+
+    <!-- 2 -->
+    <h2>2</h2>
+    <p>з великої букви англійською мовою</p>
+    <input id="text-day" type="text" placeholder="week's day" />
+    <button onclick="checkDay()">day</button>
+
+    <!-- 3 -->
+    <h2>3</h2>
+    <input min="1" max="12" id="month" type="number" placeholder="month" />
+    <button onclick="checkMonth()">month</button>
+
+    <!-- 4 -->
+    <h2>4</h2>
+    <input
+      min="1"
+      max="12"
+      id="months-days"
+      type="number"
+      placeholder="month"
+    />
+    <button onclick="checkDaysInMonth()">month day</button>
+
+    <!-- 5 -->
+    <h2>5</h2>
+    <p>з маленької букви</p>
+    <input id="color" type="text" placeholder="color" />
+    <button onclick="checkColor()">color</button>
+    <script src="./hw-5.js"></script>
+
+    <!-- 6 -->
+    <h2>6</h2>
+    <input id="number-one" type="number" placeholder="number 1" />
+    <input id="number-two" type="number" placeholder="number 2" />
+    <select id="math" onchange="checkMath()">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+  </body>
+</html>
