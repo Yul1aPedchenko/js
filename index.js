@@ -90,7 +90,6 @@ function checkMath() {
   const selectMath = document.getElementById("math").value;
   const num1 = parseFloat(document.getElementById("number-one").value);
   const num2 = parseFloat(document.getElementById("number-two").value);
-  let result;
   switch (selectMath) {
     case "+":
       alert(num1 + num2);
