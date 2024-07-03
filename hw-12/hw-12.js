@@ -2,7 +2,9 @@
 console.log("Task 1");
 
 const user = {
-  hobby: "none",
+  name: "Mango",
+  age: 20,
+  hobby: "html",
   premium: true,
 };
 user.mood = "happy";
@@ -12,14 +14,11 @@ for (const key of Object.keys(user)) {
   console.log(`${key}: ${user[key]}`);
 }
 
+// ----------
+
 //2
 console.log("Task 2");
 
-const userOne = {
-  hobby: "none",
-  premium: true,
-  mood: "happy",
-};
 const countProps = (obj) => {
   let count = 0;
   for (const key in obj) {
@@ -27,7 +26,11 @@ const countProps = (obj) => {
   }
   return count;
 };
-console.log(countProps(userOne));
+console.log(countProps({})); // 0
+console.log(countProps({ name: "Mango", age: 2 })); // 2
+console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+// ----------
 
 //3
 console.log("Task 3");
@@ -39,29 +42,46 @@ const workers = {
   Jon: 13,
   Sara: 10,
 };
-const findBestWorker = (workers) => {
-  let bestWorker = "";
+const findBestEmployee = (employees) => {
+  let bestEmployee = "";
   let maxTasks = 0;
-  for (const worker in workers) {
-    if (workers[worker] > maxTasks) {
-      maxTasks = workers[worker];
-      bestWorker = worker;
+  for (const employee in employees) {
+    if (employees[employee] > maxTasks) {
+      maxTasks = employees[employee];
+      bestEmployee = employee;
     }
   }
-  return bestWorker;
+  return bestEmployee;
 };
-console.log(findBestWorker(workers));
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  })
+); // lorence
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  })
+); // mango
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  })
+); // lux
+
+// ----------
 
 //4
 console.log("Task 4");
 
-const employees = {
-  Nika: 1500,
-  Bob: 400,
-  Nick: 700,
-  Jon: 1300,
-  Sara: 1000,
-};
 const countTotalSalary = (employees) => {
   let totalSlary = 0;
   for (key in employees) {
@@ -69,43 +89,67 @@ const countTotalSalary = (employees) => {
   }
   return totalSlary + "грн";
 };
-console.log(countTotalSalary(employees));
+console.log(countTotalSalary({})); // 0
+console.log(
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
+  })
+); // 330
+console.log(
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+  })
+); // 400
+
+// ----------
 
 //5
 console.log("Task 5");
 
-const arr = [
-  { name: "John", age: 30 },
-  { name: "Jane", age: 25 },
-  { name: "Peter", age: 35 },
+const productsOne = [
+  { name: "Радар", price: 1300, quantity: 4 },
+  { name: "Сканер", price: 2700, quantity: 3 },
+  { name: "Дроїд", price: 400, quantity: 7 },
+  { name: "Захоплення", price: 1200, quantity: 2 },
 ];
 const getAllPropValues = (arr, prop) => {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
-    result.push(arr[i][prop]);
+    if (prop in arr[i]) {
+      result.push(arr[i][prop]);
+    }
   }
   return result;
 };
-console.log(getAllPropValues(arr, "name"));
+console.log(getAllPropValues(productsOne, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
+console.log(getAllPropValues(productsOne, "quantity")); // [4, 3, 7, 2]
+console.log(getAllPropValues(productsOne, "category")); // []
+
+// ----------
 
 //6
 console.log("Task 6");
 
 const products = [
-  { name: "Apple", price: 1.5, quantity: 2 },
-  { name: "Banana", price: 0.5, quantity: 3 },
-  { name: "Apple", price: 1.2, quantity: 1 },
-  { name: "Orange", price: 0.8, quantity: 5 },
+  { name: "Радар", price: 1300, quantity: 4 },
+  { name: "Сканер", price: 2700, quantity: 3 },
+  { name: "Дроїд", price: 400, quantity: 7 },
+  { name: "Захоплення", price: 1200, quantity: 2 },
 ];
-const calculateTotalPrice = (allProdcuts, productName) => {
+
+const calculateTotalPrice = (allProducts, productName) => {
   let totalPrice = 0;
-    let quantity = 0;
-    for (let i = 0; i < allProdcuts.length; i += 1) {
-        if (allProdcuts[i].name === productName) {
-            quantity += 1;
-            totalPrice += allProdcuts[i].price;
-        }
+  let quantity = 0;
+  for (let i = 0; i < allProducts.length; i += 1) {
+    if (allProducts[i].name === productName) {
+      totalPrice += allProducts[i].price * allProducts[i].quantity;
     }
-    return totalPrice * quantity;
+  }
+  return totalPrice;
 };
-console.log(calculateTotalPrice(products, 'Apple'));
+console.log(calculateTotalPrice(products, "Радар")); // 5200
+console.log(calculateTotalPrice(products, "Дроїд")); // 2800
