@@ -92,3 +92,111 @@ console.log(j.toString());
 
 
 //hw-3
+
+
+<!--  -->
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// console.log(likes);
+
+// const likes = tweets => tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// console.log(likes(tweets));
+
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+//   return allTags;
+// }, []);
+// console.log(tags);
+
+// const tagsSum = (tweets) =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+//     return allTags;
+//   }, []);
+// const tags = tagsSum(tweets);
+
+// const tagsCount = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+//   acc[tag] += 1;
+//   return acc;
+// };
+// const totalTags = tags => tags.reduce(tagsCount, {});
+// console.log(totalTags(tags));
+
+// const numbers = [5, 6, 1, 3, 4, 2];
+// console.log(numbers.sort());
+
+// const names = ['Alex', 'nick', 'bob', 'john'];
+// console.log(names.sort());
+
+// const letters = [5, 6, 1, 3, 4, 2];
+// console.log(letters.sort());
+// const newLetters = letters.sort((curEl, nextEl) => {
+//   return nextEl - curEl;
+// });
+// console.log(newLetters);
+
+// const fruits = ["kiwi", "apple", "orange", "banana"];
+// fruits.sort(function (cur, next) {
+//   return cur.localeCompare(next);
+// });
+// console.log(fruits);
+
+// const copy = [...fruits];
+// console.log(copy);
+// console.log(copy === fruits);
+
+// const num = [5, 6, 1, 3, 4, 2];
+// const result = num
+//   .filter((x) => x % 2 === 0)
+//   .map((y) => y * 3)
+//   .reverse();
+// console.log(result);
+
+
+
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// ];
+
+// const copyPlayers = [...players];
+// copyPlayers.sort((a, b) => b.timePlayed - a.timePlayed);
+// console.log(copyPlayers);
+
+// const arr = [
+//   { name: "John", age: 32 },
+//   { name: "Jane", age: 26 },
+//   { name: "Mike", age: 42 },
+//   { name: "Emily", age: 29 },
+// ];
+// arr.sort((a, b) => {
+//   if (a.name < b.name) {
+//     return -1;
+//   }
+//   if (a.name > b.name) {
+//     return 1;
+//   }
+//   return 0;
+// });
+// console.log(arr);
+
+
+const products = [
+  { name: "Product 1", price: 100, quantity: 5 },
+  { name: "Product 2", price: 50, quantity: 10 },
+  { name: "Product 3", price: 200, quantity: 2 },
+  { name: "Product 4", price: 50, quantity: 5 },
+];
+
+products.sort((a, b) => {
+  if (a.price !== b.price) {
+    return b.price - a.price;
+  }
+  return a.quantity - b.quantity;
+});
+console.log(products);
