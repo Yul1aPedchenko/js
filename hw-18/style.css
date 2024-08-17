@@ -1,0 +1,17 @@
+#gallery {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#gallery li {
+    padding: 20px;
+    border: 1px solid rgb(153, 153, 193);
+    background-color: rgb(190, 225, 239);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+#gallery img {
+    width: 300px;
+    border-radius: 2px;
+}
