@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./hw-9/style.css" />
+  </head>
+  <body>
+    <h2>Task 1</h2>
+    <h2>To-Do list</h2>
+    <form id="taskForm">
+      <label for="newTask">New task:</label>
+      <input type="text" id="newTask" />
+      <button type="submit" id="addTask">Add</button>
+    </form>
+    <ul id="taskList"></ul>
+
+    <h2>task 2</h2>
+    <div class="form-container">
+      <h2>Авторизація</h2>
+      <form id="authForm">
+        <label for="login">Логін:</label>
+        <input type="text" id="login" name="login" required />
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="button" id="saveBtn">Зберегти</button>
+        <button type="button" id="loginBtn">Увійти</button>
+      </form>
+    </div>
+
+    <!-- 3 -->
+    <h2>task 3</h2>
+    <div class="form-container">
+      <h2>Мої закладки</h2>
+      <input
+        type="text"
+        id="bookmarkName"
+        placeholder="Назва закладки"
+        required
+      />
+      <input type="url" id="bookmarkUrl" placeholder="URL закладки" required />
+      <button id="addBookmarkBtn">Додати закладку</button>
+      <div class="bookmarks-list" id="bookmarksList"></div>
+    </div>
+
+    <!-- 4 -->
+    <h2>task 4</h2>
+    <div class="form-container">
+      <h2>Мої контакти</h2>
+      <input
+        type="text"
+        id="userName"
+        placeholder="імʼя"
+        required
+      />
+      <input
+        type="text"
+        id="userSurname"
+        placeholder="Прізвище"
+      />
+      <input type="text" id="userPhone" placeholder="Номер телефону" required />
+      <input type="text" id="userEmail" placeholder="Електронна адреса"  />
+      <button id="addUserBtn">Додати користувача</button>
+      <div class="users-list" id="usersList"></div>
+    </div>
+    <script src="./hw-9/script.js"></script>
+  </body>
+</html>
