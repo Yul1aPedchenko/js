@@ -1,0 +1,27 @@
+.animatedDiv {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 50px auto;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    position: relative;
+    font-size: 24px;
+}
+
+.animatedDiv.jump {
+    animation: jump 1s infinite ease-in-out;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
