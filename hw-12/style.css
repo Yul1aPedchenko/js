@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+}
+#timer-1 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blanchedalmond;
+    padding: 15px;
+}
+.field {
+    background-color: burlywood;
+    padding: 5px 10px;
+}
