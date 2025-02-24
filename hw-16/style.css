@@ -1,0 +1,17 @@
+.only-country {
+    display: flex;
+    flex-direction: column;
+}
+.country-name {
+    text-align: center;
+    font-size: 30px;
+}
+.wrap {
+    display: flex;
+    flex-direction: row;
+}
+.country-wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
